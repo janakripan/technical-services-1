@@ -5,27 +5,27 @@ import { FiArrowUpRight } from "react-icons/fi";
 const aboutImages = [
   {
     url: "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&q=80&w=400",
-    style: "w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 -translate-y-6 sm:-translate-y-10 md:-translate-y-16"
+    style: "-translate-y-4 sm:-translate-y-10 md:-translate-y-16"
   },
   {
     url: "https://images.unsplash.com/photo-1588600878108-578307a3cc9d?auto=format&fit=crop&q=80&w=400",
-    style: "w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 translate-y-4 sm:translate-y-10 md:translate-y-16"
+    style: "translate-y-2 sm:translate-y-10 md:translate-y-16"
   },
   {
     url: "https://images.unsplash.com/photo-1558904541-efa8c1a68f6a?auto=format&fit=crop&q=80&w=400",
-    style: "w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 translate-y-12 sm:translate-y-24 md:translate-y-40"
+    style: "translate-y-8 sm:translate-y-24 md:translate-y-40"
   },
   {
     url: "https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=400",
-    style: "w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 translate-y-12 sm:translate-y-24 md:translate-y-40"
+    style: "translate-y-8 sm:translate-y-24 md:translate-y-40"
   },
   {
     url: "https://images.unsplash.com/photo-1535254973040-607b474cb50d?auto=format&fit=crop&q=80&w=400",
-    style: "w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 translate-y-4 sm:translate-y-10 md:translate-y-16"
+    style: "translate-y-2 sm:translate-y-10 md:translate-y-16"
   },
   {
     url: "https://images.unsplash.com/photo-1507036066871-b7e8032b3dea?auto=format&fit=crop&q=80&w=400",
-    style: "w-24 h-24 sm:w-36 sm:h-36 md:w-48 md:h-48 -translate-y-6 sm:-translate-y-10 md:-translate-y-16"
+    style: "-translate-y-4 sm:-translate-y-10 md:-translate-y-16"
   }
 ];
 
@@ -71,7 +71,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex items-center justify-center gap-3 mb-0 lg:mb-0"
+          className="flex items-center justify-center gap-3 mb-4 lg:mb-6"
         >
           <a 
             href="#contact"
@@ -93,7 +93,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="w-full flex justify-center items-center gap-3 sm:gap-6 md:gap-8 pb-32"
+          className="w-full max-w-4xl flex justify-center items-center gap-2 sm:gap-4 md:gap-6 pb-20 sm:pb-32 px-1 sm:px-0"
         >
           {aboutImages.map((img, index) => (
             <motion.div
@@ -108,10 +108,10 @@ export default function About() {
                 stiffness: 120, 
                 damping: 14 
               }}
-              className="shrink-0"
+              className="flex-1 min-w-0"
             >
               <div 
-                className={`relative rounded-[1.5rem] sm:rounded-[2rem] overflow-hidden shadow-md h-full w-full ${img.style}`}
+                className={`relative rounded-xl sm:rounded-[2rem] overflow-hidden shadow-md aspect-square w-full ${img.style}`}
               >
                 <img 
                   src={img.url} 
